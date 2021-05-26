@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   def index
+<<<<<<< HEAD
   @books = Book.all
   @book = Book.new
   end
@@ -55,3 +56,19 @@ private
   end
 
 end
+=======
+  end
+
+  def show
+  end
+
+  def new
+  end
+  
+  def create
+  end
+
+  def edit
+  end
+end
+>>>>>>> origin/main

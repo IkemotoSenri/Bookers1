@@ -39,7 +39,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :test
 
   # Print deprecation notices to the stderr.
+<<<<<<< HEAD
     config.active_support.deprecation = :silence
+=======
+  config.active_support.deprecation = :stderr
+>>>>>>> origin/main
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
