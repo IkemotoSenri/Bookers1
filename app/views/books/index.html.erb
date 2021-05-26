@@ -8,19 +8,19 @@
    <table>
      <thead>
       <tr>
-      <th>Title</th>
-      <th>Body</th>
+       <td class="line">Title</td>
+       <td class="line">Body</td>
      </tr>
      </thead>
 
       <tbody>
         <% @books.each do |book| %>
        <tr>
-        <td class="title"><%= book.title %></td>
-        <td class="body"><%= book.body %></td>
-        <td class="Show"><%= link_to "Show", book_path(book.id) %></td>
-        <td class="Edit"><%= link_to "Edit", edit_book_path(book.id) %></td>
-        <td class="Destroy"><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %> </td>
+        <td class="text-index"><%= book.title %></td>
+        <td class="text-index"><%= book.body %></td>
+        <td class="link-index"><%= link_to "Show", book_path(book.id) %></td>
+        <td class="link-index"><%= link_to "Edit", edit_book_path(book.id) %></td>
+        <td class="link-index"><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %> </td>
        </tr>
         <% end %>
       </tbody>
@@ -29,7 +29,7 @@
    <h3>New Book</h3>
    <% if @book.errors.any? %>
    <%= @book.errors.count %>errors prohibited this book from being saved
-   
+
       <ul>
       <% @book.errors.full_messages.each do |message| %>
        <li><%= message %></li>

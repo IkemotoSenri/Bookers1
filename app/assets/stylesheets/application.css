@@ -30,7 +30,20 @@
 }
 
 .index{
-  margin: 30px ;
+  margin: 30px;
+}
+
+.line{
+  font-size: 15px;
+}
+
+.text-index{
+  text-align: left;
+  padding-right: 10px;
+}
+
+.link-index{
+  padding-right: 10px;
 }
 
 .books{
