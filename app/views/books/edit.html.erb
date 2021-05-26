@@ -1,0 +1,28 @@
+
+<% if flash[:notice] %>
+<div class= "successfully"><%= flash[:notice] %></div>
+<% end %>
+<div class="edit">
+  <h2 class="editing-book">Editing Book</h2>
+  <%= form_with model:@book, local: true do |book| %>
+  
+  <% if @book.errors.any? %>
+  <%= @book.errors.count %>errors prohibited this book from being saved
+  
+  <ul>
+   <% @book.errors.full_messages.each do |message| %>
+   <li><%= message %></li>
+    <% end %>
+  </ul>
+   <% end %>
+  <p>title</p>
+  <div class="form"><%= book.text_field :title %></div>
+  <p>body</p>
+  <div class="form"><%= book.text_area :body %></div>
+  <%= book.submit "Update Book" %>
+
+  <% end %>
+  <%= link_to "Show", book_path %>
+       |
+  <%= link_to "Back", books_path %>
+</div>
