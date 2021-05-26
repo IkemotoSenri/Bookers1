@@ -34,7 +34,7 @@
       <% @book.errors.full_messages.each do |message| %>
        <li><%= message %></li>
       <% end %>
-   </ul
+   </ul>
     <% end %>
 
     <%= form_with model:@book, local:true do |f| %>
